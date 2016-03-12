@@ -170,6 +170,76 @@
 
 
 \begin{slide}
+  \SlideSection{Happy $\pi$ Day!}
+\end{slide}
+
+
+\begin{slide}
+  \h{What is $\pi$?  Apple pie?}
+
+  \fullSlideImage{apple-pie.eps}
+\end{slide}
+
+
+\begin{slide}
+  \h{What is $\pi$?  Blueberry pie?}
+
+  \fullSlideImage{blueberry-pie-slice.eps}
+\end{slide}
+
+
+\begin{slide}
+  \h{What is $\pi$?  Huckleberry pie?}
+
+  \fullSlideImage{huckleberry-pie.eps}
+\end{slide}
+
+
+\begin{slide}
+  \h{Huckleberry?}
+
+  \fullSlideImage{Huckleberry-Finn-with-rabbit.eps}
+\end{slide}
+
+
+\begin{slide}
+  \h{Huckleberry?  It's basically a blueberry.}
+
+  \fullSlideImage{huckleberry-vs-blueberry.eps}
+\end{slide}
+
+
+\begin{slide}
+  \h{We're going to need to think about this one.}
+
+  \fullSlideImage{Huckleberry-Finn-thinking.eps}
+\end{slide}
+
+
+\begin{slide}
+  \h{What is $\pi$?}
+
+\noindent
+3.1415926535897932384626433832795028841971693\\
+993751058209749445923078164062862089986280348\\
+253421170679821480865132823066470938446095505\\
+822317253594081284811174502841027019385211055\\
+596446229489549303819644288109756659334461284\\
+756482337867831652712019091456485669234603486\\
+104543266482133936072602491412737245870066063\\
+155881748815209209628292540917153643678925903\\
+600113305305488204665213841469519415116094330\\
+572703657595919530921861173819326117931051185\\
+480744623799627495673518857527248912279381830\\
+119491298336733624406566430860213949463952247\\
+371907021798609437027705392171762931767523846\\
+748184676694051320005681271452635608277857713\\
+427577896091736371787214684409012249534301465\textellipsis
+\end{slide}
+
+
+\begin{slide}
   \SlideSection{Questions?}
 \end{slide}
+
 \end{document}
