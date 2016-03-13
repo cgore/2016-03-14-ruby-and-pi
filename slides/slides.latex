@@ -113,12 +113,12 @@
 
 \newcommand{\fullSlideImage}[1]{
   \begin{center}
-    \includegraphics[width=4in,height=2.5in,keepaspectratio=true]{#1}
+    \includegraphics[width=4in,height=2.25in,keepaspectratio=true]{#1}
   \end{center}
 }
 
 \newcommand{\halfSlideImage}[1]{
-  \includegraphics[width=2in,height=2.5in,keepaspectratio=true]{#1}
+  \includegraphics[width=2in,height=2.25in,keepaspectratio=true]{#1}
 }
 
 \newcommand{\rightSideImageName}{you-must-supply-the-image-name.eps}
@@ -135,6 +135,20 @@
   \end{tabular}
 }
 
+\newcommand{\leftSideImageName}{you-must-supply-the-image-name.eps}
+\newenvironment{leftSideImage}[1]
+{
+  \renewcommand{\leftSideImageName}{#1}
+  \begin{tabular}{lr}
+    \halfSlideImage{\leftSideImageName}
+    &
+    \begin{minipage}[b]{2in}
+      \raggedright
+}
+{
+    \end{minipage}
+  \end{tabular}
+}
 
 \newpagestyle{cgore}{}{Chris Gore\hfil\thepage\hfil\texttt{cgore.com}}
 \pagestyle{cgore}
@@ -246,6 +260,42 @@
 
 
 \begin{slide}
+  \h{Why should we care about $\pi$?}
+
+  \fullSlideImage{mathematics-is-the-language-of-nature.eps}
+\end{slide}
+
+
+\begin{slide}
+  \h{Mathematics and computers are deeply intertwined.}
+
+  \fullSlideImage{pi-computer.eps}
+\end{slide}
+
+
+\begin{slide}
+  \h{Mathematics is a language that let's us truly understand how games work.}
+
+  \fullSlideImage{pi-go.eps}
+\end{slide}
+
+
+\begin{slide}
+  \h{If we understand mathematics, maybe we can therefore understand God's grandest game?
+    Maybe God will play a game with us?}
+
+  \fullSlideImage{pi-hasad.eps}
+\end{slide}
+
+
+\begin{slide}
+  \h{Or maybe that's just crazy?}
+
+  \fullSlideImage{pi-drill.eps}
+\end{slide}
+
+
+\begin{slide}
   \h{You can get a greatly abbreviated approximation of $\pi$ in Ruby quite easily.}
 
 \begin{lstlisting}
@@ -274,11 +324,129 @@ Math.acos -1
 
 \begin{slide}
   \h{$\pi$ is an irrational number.}
+
+  \fullSlideImage{Jack-Nicholson-The-Shining.eps}
 \end{slide}
 
 
 \begin{slide}
-  \h{$\pi$ is a transcendental number.}
+  \h{Irrational meaning it can't be expressed as a fraction.
+    There are no integers $a$ and $b$ such that $\pi = \frac{a}{b}$.}
+
+  \begin{leftSideImage}{Hippasus.eps}
+    Hippasus of Metapontum, founder of the Mathematikoi school of the
+    Pythagoreans, proved it \textit{(probably.)}
+  \end{leftSideImage}
+\end{slide}
+
+
+\begin{slide}
+  \h{The Pythagoreans took mathematics \textit{really} seriously.
+    They threw Hippasus overboard for proving $\pi$ was irrational.
+    \textit{(Or possibly for $\sqrt{2}$.)}}
+
+  \fullSlideImage{Greek-galleys.eps}
+\end{slide}
+
+
+\begin{slide}
+  \h{Proving that $\sqrt{2}$ is irrational is easier than proving $\pi$.
+    We're not sure which was proven first though.}
+
+  \fullSlideImage{sqrt2-bluebg.eps}
+\end{slide}
+
+
+\begin{slide}
+  \h{One of the main reasons the Ancient Greeks went so far with Geometry in
+    preference to Algebra was because of irrational numbers.}
+
+  \fullSlideImage{Euclid-Elemen-Geom.eps}
+\end{slide}
+
+
+\begin{slide}
+  \h{$\pi$ is a transcendental number.
+    You can't express it as a polynomial.}
+
+  \fullSlideImage{ComplexSet-big.eps}
+\end{slide}
+
+
+\begin{slide}
+  \h{Let's calculate $\pi$!}
+
+  Basic algorithm\footnote{\texttt{http://alvinalexander.com/blog/post/ruby/calculating-pi-with-ruby}}: $\frac{4}{1} - \frac{4}{3} + \frac{4}{5} - \frac{4}{7} + \frac{4}{9} - \ldots$
+
+\begin{lstlisting}[basicstyle=\scriptsize]
+def gimme_pi(n)
+  num, den = 4.0, 1
+  pi = 0
+  plus = true
+  while den < n
+    if plus
+      pi = pi + num/den
+    else
+      pi = pi - num/den
+    end
+    plus = not plus
+    den = den + 2
+  end
+  pi
+end
+\end{lstlisting}
+\end{slide}
+
+
+\begin{slide}
+\begin{lstlisting}
+gimme_pi 1
+# => 0
+gimme_pi 10
+# => 3.3396825396825403
+gimme_pi 100
+# => 3.121594652591011
+gimme_pi 1_000
+# => 3.139592655589785
+gimme_pi 10_000
+# => 3.141392653591791
+gimme_pi 100_000
+# => 3.1415726535897814
+gimme_pi 1_000_000
+# => 3.141590653589692
+gimme_pi 10_000_000
+# => 3.1415924535897797
+gimme_pi 100_000_000
+# => 3.1415926335902506
+\end{lstlisting}
+\end{slide}
+
+
+\begin{slide}
+  \h{Why $\pi$?}
+
+  \begin{leftSideImage}{William-Jones.eps}
+    Welsh mathematician William Jones in his 1706 work \textit{Synopsis
+      Palmariorum Matheseos}; or, \textit{a New Introduction to the
+      Mathematics}.
+    He used $\pi$ for \textit{``1/2 of the periphery''}, the
+    periphery being the circumference.
+  \end{leftSideImage}
+\end{slide}
+
+
+\begin{slide}
+  \h{And then Euler copied Jones' usage of $\pi$ for the ratio in his works,
+    giving it permanence.}
+
+  \fullSlideImage{Leonhard-Euler.eps}
+\end{slide}
+
+
+\begin{slide}
+  \h{Euler's Identity}
+
+  \SlideSection{$$e^{i \pi} + 1 = 0$$}
 \end{slide}
 
 
