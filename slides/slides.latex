@@ -185,6 +185,8 @@
 
 \begin{slide}
   \SlideSection{Happy $\pi$ Day!}
+
+  \fullSlideImage{Augustus-De-Morgan-party.eps}
 \end{slide}
 
 
@@ -444,9 +446,61 @@ gimme_pi 100_000_000
 
 
 \begin{slide}
-  \h{Euler's Identity}
+  \h{Euler's Identity, $e^{i \pi} + 1 = 0$}
 
-  \SlideSection{$$e^{i \pi} + 1 = 0$$}
+  Five very important constants:
+  \begin{itemize}
+  \item Euler's number (a.k.a. Napier's constant), $e$
+  \item The imaginary unit, $i = \sqrt{-1}$
+  \item $\pi$ of course
+  \item The additive identity, $0$
+  \item The multiplicative identity, $1$
+  \end{itemize}
+
+  Three basic operations happen exactly once: addition, multiplication, and exponentiation.
+\end{slide}
+
+
+\begin{slide}
+  \h{What about $\tau$?}
+
+  A few years ago Michael Hartl started arguing for using
+
+  $$ \tau = 2\pi \approx 6.283185\ldots $$
+
+  as the primary constant instead.
+  There's a few reasons why that's a bad idea.
+\end{slide}
+
+\begin{slide}
+  \begin{leftSideImage}{Yong-tau-foo-sweet.eps}
+    \begin{itemize}
+    \item Somebody in the 1950's was using $\tau = \frac{1}{2} \pi$, and that
+      actually got some currency, so we'd then have $\tau = 4\tau$, which is
+      just silly.
+    \item Pie tastes awesome.  What's tau taste like?  Maybe yong tau foo?
+      Looks tasty, but not as tasty as pie.
+    \item We don't have an STL Ruby meeting on 6/28/2016.
+    \end{itemize}
+  \end{leftSideImage}
+\end{slide}
+
+
+\begin{slide}
+  \h{And most importantly, $\tau$ is trying to make math easier, but math's not
+    supposed to be easy.}
+
+  \fullSlideImage{opinion-descarted.eps}
+\end{slide}
+
+
+\begin{slide}
+  \h{Degrees are kind of weird?
+    That's because they date back to the Babylonians.
+    Let's switch to radians!
+    $2\pi^{\mathrm{rad}} = 360^{\circ}$}
+
+  \fullSlideImage{degree-radian-conversion.eps}
 \end{slide}
 
 
